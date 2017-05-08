@@ -2,11 +2,23 @@
 <html lang="zh-cn">
 <head>
     <meta charset="utf-8">
-    <title>页面重定向</title>
+    <title>gitbook_callback</title>
 </head>
 <body>
 <script type="text/javascript">
-    window.location.replace("http://www.baidu.com"); 
+	
+	function GetQueryString()
+	{
+     var url = location.search;
+	 var str = "gitbook://"
+	 if (url.indexOf("?") != -1) 
+	 { 
+		str += url.substr(1); 
+	 }
+	 return str;
+	}
+	
+    window.location.replace(GetQueryString); 
 </script>
 </body>
 </html>
