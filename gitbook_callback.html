@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <title>gitbook_callback</title>
+</head>
+<body>
+<script type="text/javascript">
+	var url = location.search;
+	var str = "";
+	if (url.indexOf("?") != -1) 
+	{ 
+		str = url.substr(1); 
+	}
+    window.location.replace("gitbook://callback/"+str); 
+</script>
+</body>
+</html>
