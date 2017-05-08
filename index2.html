@@ -6,8 +6,13 @@
 </head>
 <body>
 <script type="text/javascript">
-	
-    window.location.replace("alipay://dddd"); 
+	var url = location.search;
+	var str = "";
+	if (url.indexOf("?") != -1) 
+	{ 
+		str = url.substr(1); 
+	}
+    window.location.replace("alipay://dddd"+str); 
 </script>
 </body>
 </html>
